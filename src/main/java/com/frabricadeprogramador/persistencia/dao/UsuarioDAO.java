@@ -1,4 +1,4 @@
-package com.frabricadeprogramador.presistencia.dao;
+package com.frabricadeprogramador.persistencia.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

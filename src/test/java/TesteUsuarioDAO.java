@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 import com.fabricadeprogramador.persistencia.entidade.Usuario;
-import com.frabricadeprogramador.presistencia.dao.UsuarioDAO;
+import com.frabricadeprogramador.persistencia.dao.UsuarioDAO;
 
 public class TesteUsuarioDAO {
 
