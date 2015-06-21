@@ -1,4 +1,3 @@
-README
 
 #Nome: 
 	## Projeto Fabrica de Programador - High Tech School.
@@ -21,7 +20,3 @@ aqui nesse README.
 * Dia 13/06/15 - Inicio do Projeto Web
 * Dia 20/06/15 - Introdução a Postegres e Criação do Banco e Tabelas
 
-| Primeiro Header | Segundo Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
