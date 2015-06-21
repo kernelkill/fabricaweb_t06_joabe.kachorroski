@@ -1,13 +1,13 @@
 README
 
 #Nome: 
-	##Projeto Fabrica de Programador High Tech.
+	##Projeto Fabrica de Programador - High Tech School.##
 #Autor:
-	##Joabe G. Q. Kachorroski
+	##Joabe G. Q. Kachorroski##
 #Data:
-	##06/06/2015
+	##06/06/2015##
 #Versao:
-	##Projeto esta na Versão 0.1
+	##Projeto esta na Versão 0.1##
 
 #Descrição 
 
