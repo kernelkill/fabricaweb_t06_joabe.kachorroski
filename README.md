@@ -16,7 +16,7 @@ e desenvolver aplicaçoes Webs, tudo que for desenvolvido ou alterado sera descr
 aqui nesse README.
 
 #O que foi feito?
-* Dia 06/06/15 - Inicio das aulas
-* Dia 13/06/15 - Inicio do Projeto Web
-* Dia 20/06/15 - Introdução a Postegres e Criação do Banco e Tabelas
-
+* Dia 06/06/15 - Inicio das aulas.
+* Dia 13/06/15 - Inicio do Projeto Web.
+* Dia 20/06/15 - Introdução a Postegres e Criação do Banco e Tabelas.
+* Dia 21/06/15 - Cadastro de Usuario.
