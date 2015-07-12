@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.management.RuntimeErrorException;
+//import javax.management.RuntimeErrorException;
 
 import com.fabricadeprogramador.persistencia.entidade.Usuario;
 import com.fabricadeprogramador.persistencia.jdbc.ConexaoFactory;
@@ -15,7 +15,7 @@ import com.fabricadeprogramador.persistencia.jdbc.ConexaoFactory;
 public class UsuarioDAO {
 
 	// Primeiro: pega a conexao.
-	Connection con = ConexaoFactory.getConxao();
+	Connection con = ConexaoFactory.getConexao();
 
 	public void cadastrarUsuario(Usuario usu) {
 
@@ -69,7 +69,7 @@ public class UsuarioDAO {
 		// Pegando o statement
 		try (PreparedStatement preparador = con.prepareStatement(sql)) {
 
-			// Stando o id
+			// Setando o id
 			preparador.setInt(1, id);
 
 			// executar

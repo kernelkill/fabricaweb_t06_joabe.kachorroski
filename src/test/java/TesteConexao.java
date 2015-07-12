@@ -12,7 +12,7 @@ public class TesteConexao {
 	}
 	
 	public static void testaConexao(){
-		ConexaoFactory.getConxao();
+		ConexaoFactory.getConexao();
 	}
 
 }
