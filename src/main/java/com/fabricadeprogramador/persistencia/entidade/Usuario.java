@@ -1,5 +1,7 @@
 package com.fabricadeprogramador.persistencia.entidade;
 
+//Usuario nunca mexe apenas Atributos
+
 public class Usuario {
 	
 	private Integer id;
