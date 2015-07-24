@@ -1,4 +1,4 @@
-import java.sql.PreparedStatement;
+//import java.sql.PreparedStatement;
 import java.util.List;
 import java.util.Scanner;
 
@@ -16,14 +16,14 @@ public class TesteUsuarioDAO {
 		Usuario usu = new Usuario();
 		
 		//Instancia do DAO
-		UsuarioDAO dao =new UsuarioDAO();
+		UsuarioDAO dao = new UsuarioDAO();
 		
 		//CadastrarUsuario(usu, teclado, dao);
 		//AterarUsuario(usu, teclado, dao);
 		//ExcluirUsuario(teclado, dao);
 		//salvarUsuario(usu, teclado, dao);
-		//buscaUsuarioPorId(teclado, dao);
-		buscarTodos(dao);
+		buscaUsuarioPorId(teclado, dao);
+		//buscarTodos(dao);
 		teclado.close();	
 	}
 	

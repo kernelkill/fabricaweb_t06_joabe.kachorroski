@@ -123,7 +123,7 @@ public class UsuarioDAO {
 	public List<Usuario> buscaTodos(){
 		
 		//Montar SQL
-		String sql = "SELECT * FROM usuario order by nome desc";
+		String sql = "SELECT * FROM usuario order by id asc";
 		
 		//Pegar Statement
 		try {
@@ -134,8 +134,8 @@ public class UsuarioDAO {
 			ResultSet result = preparador.executeQuery();
 			
 			while(result.next()){
-				//setar usuario
 				
+				//Estancia a classe usuario
 				Usuario usu = new Usuario();
 				
 				usu.setId(result.getInt("ID"));

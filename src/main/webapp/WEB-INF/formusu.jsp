@@ -4,11 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+
+</script>
 <title>Cadastrando Usuario</title>
 </head>
+
 <body>
 	<form method="post" action="usucontroller">
 			<fieldset>
+				<input type="hidden" name="acao" value="cad">
 				<label for="idId"> ID: <input type="text" id="idId" name="id"> </label><br/>
 				<label for="idNome">Nome: <input type="text" id="idNome" name="nome"></label><br/>
 				<label for="idLogin">Login: <input type="text" id="idLogin" name="login"></label><br/>
