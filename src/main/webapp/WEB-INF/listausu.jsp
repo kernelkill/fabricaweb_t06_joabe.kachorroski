@@ -20,18 +20,23 @@
 	<%
 		List<Usuario> lista = (List)request.getAttribute("lista");
 	%>
-	<form method="post" action="usucontroller" onclick="return confirma()">
+	
+	<%@ include file="menu.jsp" %>
+	<br>
+	<br>
+	
+	<form method="post" action="usucontroller" style="margin: auto; width: 800px" >
 	
 	<input type="hidden" name="acao" value="exc">
 	
 	<table style="border:2px solid red;">
 	<thead>
-		<tr style="background-color: yellow;">
+		<tr style="background-color: green; color: yellow;">
 			<td>ID</td>
-			<td>Nome</td>
-			<td>Login</td>
-			<td>Senha</td>
-			<td>Excluir</td>
+			<td>NOME</td>
+			<td>LOGIN</td>
+			<td>SENHA</td>
+			<td>EXCLUIR</td>
 		</tr>
 	</thead>
 	
@@ -42,13 +47,17 @@
 			<td><%= usu.getNome() %></td>
 			<td><%= usu.getLogin() %></td>
 			<td><%= usu.getSenha() %></td>
-			<td><input type="checkbox" name="id" value="<%= usu.getId()%>"></td>
+			<td><input type="checkbox" name="id" value="<%= usu.getId()%>">
+			<!-- Link para altereção -->
+			<a href="usucontroller?acao=alt&id=<%= usu.getId()%> " style="font-family: Arial;">Alterar</a></td>
 			
 		</tr>
 		<%} %>
 	</tbody>
 	</table>
-	<input type="submit" value="Excluir">
+	<br>
+	<input type="submit" value="Excluir" onclick="return confirma()" >
+	<input type="button" value="Novo" onclick="location.href='usucontroller?acao=form'"> 
 	</form>
 </body>
 </html>

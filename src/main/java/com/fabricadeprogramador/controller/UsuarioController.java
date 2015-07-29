@@ -15,6 +15,11 @@ import com.fabricadeprogramador.persistencia.entidade.Usuario;
 @WebServlet("/usucontroller")
 public class UsuarioController extends HttpServlet {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Override
 	public void init() throws ServletException {
 		System.out.println("Chamando o init...");
@@ -45,7 +50,7 @@ public class UsuarioController extends HttpServlet {
 		// Instanciando o UsuairioDAO
 		UsuarioDAO dao = new UsuarioDAO();
 
-		if (acao.equalsIgnoreCase("cad") || acao.equalsIgnoreCase("alt")) {
+		if (acao.equalsIgnoreCase("cad")) {
 
 			usu.setNome(nome);
 			usu.setLogin(login);
@@ -58,17 +63,39 @@ public class UsuarioController extends HttpServlet {
 
 			if (id != null && !id.isEmpty() && Integer.parseInt(id) > 0) {
 
-				usu.setId(Integer.parseInt(id));
-				usu.setNome(nome);
-				usu.setLogin(login);
-				usu.setSenha(senha);
-
-				dao.alterar(usu);
+				//Pegando o id da requisição
+				@SuppressWarnings("unused")
+				String idAlterar = req.getParameter("id");
+				
+				//Buscar o Usuario referente ao idAlterar
+				Usuario usuAlt = dao.buscarPoId(Integer.parseInt(id));
+				
+				//Colocar o objeto usuario na requisição
+				req.setAttribute("usuario", usuAlt);
+				
+				//Despachar a requisição para o formusu.jsp
+				req.getRequestDispatcher("WEB-INF/formusu.jsp").forward(req, resp);
+				
+//				usu.setId(Integer.parseInt(id));
+//				usu.setNome(nome);
+//				usu.setLogin(login);
+//				usu.setSenha(senha);
+//
+//				dao.alterar(usu);
 			} else {
 				resp.getWriter().print("<h1>ID incorreto</h1>");
 			}
 
 		} else if (acao.equalsIgnoreCase("form")) {
+			
+			//Instanciar um Usuario
+			Usuario usuCad = new Usuario();
+			usuCad.setId(0);
+			usuCad.setNome("");
+			usuCad.setLogin("");
+			usuCad.setSenha("");
+			
+			req.setAttribute("usuario", usuCad);
 
 			// dao.excluir(Integer.parseInt(id));
 			// resp.sendRedirect("WEB-INF/formusu.jsp");

@@ -18,11 +18,11 @@ public class TesteUsuarioDAO {
 		//Instancia do DAO
 		UsuarioDAO dao = new UsuarioDAO();
 		
-		//CadastrarUsuario(usu, teclado, dao);
+		CadastrarUsuario(usu, teclado, dao);
 		//AterarUsuario(usu, teclado, dao);
 		//ExcluirUsuario(teclado, dao);
 		//salvarUsuario(usu, teclado, dao);
-		buscaUsuarioPorId(teclado, dao);
+		//buscaUsuarioPorId(teclado, dao);
 		//buscarTodos(dao);
 		teclado.close();	
 	}
