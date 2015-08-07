@@ -39,7 +39,6 @@
 			<td>EXCLUIR</td>
 		</tr>
 	</thead>
-	
 	<tbody style="background-color: rgba(0,0,0,.3)">
 	<%for(Usuario usu: lista){ %>
 		<tr>

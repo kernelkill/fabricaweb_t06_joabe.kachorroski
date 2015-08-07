@@ -2,7 +2,7 @@
 import java.util.List;
 import java.util.Scanner;
 
-import com.fabricadeprogramador.persistencia.dao.UsuarioDAO;
+import com.fabricadeprogramador.persistencia.dao.UsuarioDAOJDBC;
 import com.fabricadeprogramador.persistencia.entidade.Usuario;
 
 public class TesteUsuarioDAO {
@@ -16,7 +16,7 @@ public class TesteUsuarioDAO {
 		Usuario usu = new Usuario();
 		
 		//Instancia do DAO
-		UsuarioDAO dao = new UsuarioDAO();
+		UsuarioDAOJDBC dao = new UsuarioDAOJDBC();
 		
 		CadastrarUsuario(usu, teclado, dao);
 		//AterarUsuario(usu, teclado, dao);
@@ -27,7 +27,7 @@ public class TesteUsuarioDAO {
 		teclado.close();	
 	}
 	
-	public static void CadastrarUsuario(Usuario usu, Scanner teclado, UsuarioDAO dao){
+	public static void CadastrarUsuario(Usuario usu, Scanner teclado, UsuarioDAOJDBC dao){
 		
 		System.out.println("Digite o Nome do Usuario: ");
 		usu.setNome(teclado.nextLine());
@@ -39,13 +39,13 @@ public class TesteUsuarioDAO {
 		usu.setSenha(teclado.nextLine());
 		
 		// Invocar o metodo cadastrarUsuario.
-		dao.cadastrarUsuario(usu);
+		dao.cadastrar(usu);
 		
 		//System.out.println("Usuario Cadastrado com Sucesso!!!");
 		System.out.println("Usuario Cadastrado com Sucesso!!!");
 	}
 	
-	public static void AterarUsuario(Usuario usu, Scanner teclado, UsuarioDAO dao){
+	public static void AterarUsuario(Usuario usu, Scanner teclado, UsuarioDAOJDBC dao){
 		
 		System.out.println("Digite o ID do usuario a ser Alterado: ");
 		usu.setId(teclado.nextInt());
@@ -68,7 +68,7 @@ public class TesteUsuarioDAO {
 		
 	}
 	
-	public static void ExcluirUsuario(Scanner teclado, UsuarioDAO dao){
+	public static void ExcluirUsuario(Scanner teclado, UsuarioDAOJDBC dao){
 		
 		System.out.println("Digite o ID do Usuario a ser exluido: ");
 		Integer id = teclado.nextInt();
@@ -78,7 +78,7 @@ public class TesteUsuarioDAO {
 		System.out.println("Usuario com o id " + id + " exluido com sucesso!");
 	}
 	
-	public static void salvarUsuario(Usuario usu, Scanner teclado, UsuarioDAO dao){
+	public static void salvarUsuario(Usuario usu, Scanner teclado, UsuarioDAOJDBC dao){
 		
 		System.out.println("Digite o ID do usuario a ser Alterado: ");
 		usu.setId(teclado.nextInt());
@@ -101,7 +101,7 @@ public class TesteUsuarioDAO {
 		
 	}
 	
-	public static void buscaUsuarioPorId(Scanner teclado, UsuarioDAO dao){
+	public static void buscaUsuarioPorId(Scanner teclado, UsuarioDAOJDBC dao){
 		
 		System.out.println("Digite o ID do usuario a ser buscado: ");
 		Integer id = teclado.nextInt();
@@ -117,10 +117,10 @@ public class TesteUsuarioDAO {
 			System.out.println("Senha: " + usuRetornado.getSenha());
 		}
 	}
-	public static void buscarTodos(UsuarioDAO dao){
+	public static void buscarTodos(UsuarioDAOJDBC dao){
 		
 		//invocar o metodo buscarTodos
-		List<Usuario> lista = dao.buscaTodos();
+		List<Usuario> lista = dao.buscarTodos();
 		
 		//imprimir
 		for(Usuario usu : lista){

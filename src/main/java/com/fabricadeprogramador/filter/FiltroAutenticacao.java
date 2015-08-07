@@ -18,6 +18,7 @@ import javax.xml.ws.Dispatch;
 import com.fabricadeprogramador.persistencia.entidade.Usuario;
 
 
+@SuppressWarnings("unused")
 @WebFilter(dispatcherTypes={DispatcherType.REQUEST}, urlPatterns={"/*"})
 public class FiltroAutenticacao implements Filter {
 

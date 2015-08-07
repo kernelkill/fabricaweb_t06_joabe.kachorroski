@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.fabricadeprogramador.persistencia.dao.UsuarioDAO;
+import com.fabricadeprogramador.persistencia.dao.UsuarioDAOJDBC;
 import com.fabricadeprogramador.persistencia.entidade.Usuario;
 
 @WebServlet("/usucontroller")
@@ -48,15 +48,14 @@ public class UsuarioController extends HttpServlet {
 		// Instanciando o usuario
 		Usuario usu = new Usuario();
 		// Instanciando o UsuairioDAO
-		UsuarioDAO dao = new UsuarioDAO();
+		UsuarioDAOJDBC dao = new UsuarioDAOJDBC();
 
 		if (acao.equalsIgnoreCase("cad")) {
 
 			usu.setNome(nome);
 			usu.setLogin(login);
 			usu.setSenha(senha);
-
-			dao.cadastrarUsuario(usu);
+			dao.cadastrar(usu);
 			resp.getWriter().print("Usuario Cadastrado com Sucesso!");
 
 		} else if (acao.equalsIgnoreCase("alt")) {
@@ -103,7 +102,7 @@ public class UsuarioController extends HttpServlet {
 
 		} else if (acao.equalsIgnoreCase("list")) {
 
-			List<Usuario> listaUsuario = dao.buscaTodos();
+			List<Usuario> listaUsuario = dao.buscarTodos();
 
 			req.setAttribute("lista", listaUsuario);
 
@@ -130,7 +129,7 @@ public class UsuarioController extends HttpServlet {
 		// Instanciando o usuario
 		Usuario usu = new Usuario();
 		// Instanciando o UsuairioDAO
-		UsuarioDAO dao = new UsuarioDAO();
+		UsuarioDAOJDBC dao = new UsuarioDAOJDBC();
 
 		if (acao.equalsIgnoreCase("cad")) {
 
@@ -162,7 +161,7 @@ public class UsuarioController extends HttpServlet {
 				usu.setLogin(login);
 				usu.setSenha(senha);
 
-				dao.cadastrarUsuario(usu);
+				dao.cadastrar(usu);
 				resp.getWriter().print(
 						"<h1>Usuario " + usu.getNome()
 								+ " Cadastrado com Sucesso!</h1>");

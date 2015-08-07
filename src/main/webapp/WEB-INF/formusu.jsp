@@ -31,11 +31,11 @@
 				<br/>
 				
 				<label for="idLogin">Login: </label>
-				<input type="text" id="idLogin" name="login" value="<%= usu.getLogin()%>" required="">
+				<input type="text" id="idLogin" name="login" value="<%= usu.getLogin()%>" required="senha requirida">
 				<br/>
 				
 				<label for="idSenha"> Senha: </label>
-				<input type="password"	id="idSenha" name="senha" value="<%= usu.getSenha()%>" required="">
+				<input type="password"	id="idSenha" name="senha" required="" value="<%= usu.getSenha()%>" >
 				<br/>
 				
 				<input type="submit" value="Salvar">
