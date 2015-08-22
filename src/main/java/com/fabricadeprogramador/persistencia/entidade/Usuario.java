@@ -24,6 +24,9 @@ public class Usuario implements Serializable{
 	private String login;
 	private String senha;
 	
+	public Usuario(){
+		
+	}
 	
 	public Integer getId() {
 		return id;
