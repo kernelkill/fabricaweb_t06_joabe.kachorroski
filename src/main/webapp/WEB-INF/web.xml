@@ -6,6 +6,8 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 version="2.5">
   <display-name>cjweb</display-name>
   <welcome-file-list>
-    <welcome-file>login.jsp</welcome-file>
+   
+    <welcome-file>*.xtml</welcome-file>
+    
   </welcome-file-list>
 </web-app>

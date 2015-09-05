@@ -19,7 +19,7 @@ import com.fabricadeprogramador.persistencia.entidade.Usuario;
 
 
 @SuppressWarnings("unused")
-@WebFilter(dispatcherTypes={DispatcherType.REQUEST}, urlPatterns={"/*"})
+//@WebFilter(dispatcherTypes={DispatcherType.REQUEST}, urlPatterns={"/*"})
 public class FiltroAutenticacao implements Filter {
 
 	@Override
